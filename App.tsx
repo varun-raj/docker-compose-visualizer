@@ -22,7 +22,6 @@ import {
     Share2,
     Github,
     Upload,
-    Download,
     Sparkles,
     AlertCircle
 } from 'lucide-react';
@@ -145,15 +144,6 @@ function App() {
     }
   }, []);
 
-  const handleFileDownload = useCallback(() => {
-    const blob = new Blob([yamlContent], { type: 'text/yaml' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = 'docker-compose.yml';
-    link.click();
-    URL.revokeObjectURL(url);
-  }, [yamlContent]);
 
 
   return (
@@ -211,14 +201,6 @@ function App() {
           >
             <Upload size={20} />
           </label>
-
-          <button
-            onClick={handleFileDownload}
-            className="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors text-slate-600 dark:text-slate-400"
-            title="Download docker-compose.yml"
-          >
-            <Download size={20} />
-          </button>
 
           <ExportMenu yamlContent={yamlContent} isDark={isDark} />
 

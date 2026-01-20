@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Download, Camera, FileText } from 'lucide-react';
+import { Download, Camera, FileText, FileCode } from 'lucide-react';
 import { exportAsImage, exportAsPDF } from '../utils/exporter';
 import clsx from 'clsx';
 
@@ -35,6 +35,17 @@ export const ExportMenu: React.FC<ExportMenuProps> = ({ yamlContent, isDark }) =
     setIsOpen(false);
   };
 
+  const handleDownloadYaml = () => {
+    const blob = new Blob([yamlContent], { type: 'text/yaml' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'docker-compose.yml';
+    link.click();
+    URL.revokeObjectURL(url);
+    setIsOpen(false);
+  };
+
   return (
     <div className="relative">
       <button
@@ -58,6 +69,15 @@ export const ExportMenu: React.FC<ExportMenuProps> = ({ yamlContent, isDark }) =
               "py-2"
             )}
           >
+            <button
+              onClick={handleDownloadYaml}
+              className="w-full px-4 py-2 text-left hover:bg-slate-100 dark:hover:bg-slate-700 flex items-center gap-2 text-sm text-slate-700 dark:text-slate-300"
+              title="Download docker-compose.yml file"
+            >
+              <FileCode size={16} />
+              Download YAML
+            </button>
+            <div className="border-t border-slate-200 dark:border-slate-700 my-1" />
             <button
               onClick={handleExportImage}
               className="w-full px-4 py-2 text-left hover:bg-slate-100 dark:hover:bg-slate-700 flex items-center gap-2 text-sm text-slate-700 dark:text-slate-300"
