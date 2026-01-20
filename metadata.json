@@ -1,0 +1,5 @@
+{
+  "name": "Docker Compose Visualizer",
+  "description": "A frontend-only tool to visualize Docker Compose files as interactive architecture diagrams using React Flow.",
+  "requestFramePermissions": []
+}

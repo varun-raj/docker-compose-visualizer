@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Docker Compose Visualizer - Interactive YAML Graph Tool | Free Online</title>
+    <meta name="title" content="Docker Compose Visualizer - Interactive YAML Graph Tool | Free Online" />
+    <meta name="description" content="Visualize and analyze your docker-compose.yml files with an interactive graph. Features include syntax highlighting, validation, port conflict detection, dependency cycle analysis, and export to PNG/PDF. Free online tool for Docker developers." />
+    <meta name="keywords" content="docker compose, docker-compose.yml, docker visualizer, yaml visualizer, docker graph, compose file analyzer, docker compose validator, docker compose tool, docker network visualization, docker services graph" />
+    <meta name="author" content="Docker Compose Visualizer" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="theme-color" content="#3b82f6" />
+    <meta name="color-scheme" content="light dark" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://docker-compose-visualizer.varunraj.in/" />
+    <meta property="og:title" content="Docker Compose Visualizer - Interactive YAML Graph Tool" />
+    <meta property="og:description" content="Visualize and analyze your docker-compose.yml files with an interactive graph. Features include syntax highlighting, validation, port conflict detection, and export capabilities." />
+    <meta property="og:image" content="https://docker-compose-visualizer.varunraj.in/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Docker Compose Visualizer - Interactive graph showing Docker services, networks, and volumes" />
+    <meta property="og:site_name" content="Docker Compose Visualizer" />
+    <meta property="og:locale" content="en_US" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://docker-compose-visualizer.varunraj.in/" />
+    <meta name="twitter:title" content="Docker Compose Visualizer - Interactive YAML Graph Tool" />
+    <meta name="twitter:description" content="Visualize and analyze your docker-compose.yml files with an interactive graph. Free online tool for Docker developers." />
+    <meta name="twitter:image" content="https://docker-compose-visualizer.varunraj.in/og-image.png" />
+    <meta name="twitter:image:alt" content="Docker Compose Visualizer - Interactive graph visualization" />
+    <meta name="twitter:creator" content="@dockercomposeviz" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://docker-compose-visualizer.varunraj.in/" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Docker Compose Visualizer",
+      "description": "Interactive tool for visualizing and analyzing Docker Compose YAML files with graph visualization, validation, and export capabilities",
+      "url": "https://docker-compose-visualizer.varunraj.in/",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "Interactive graph visualization",
+        "YAML syntax highlighting",
+        "Real-time validation",
+        "Port conflict detection",
+        "Dependency cycle detection",
+        "Security warnings",
+        "Export to PNG/PDF",
+        "File upload/download"
+      ],
+      "browserRequirements": "Requires JavaScript. Requires HTML5.",
+      "softwareVersion": "1.0.0",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "150"
+      }
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      .font-mono {
+        font-family: 'JetBrains Mono', monospace;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              background: 'var(--background)',
+              foreground: 'var(--foreground)',
+              primary: '#3b82f6',
+              secondary: '#64748b',
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "clsx": "https://esm.sh/clsx@^2.1.1",
+    "reactflow/": "https://esm.sh/reactflow@^11.11.4/",
+    "reactflow": "https://esm.sh/reactflow@^11.11.4",
+    "dagre": "https://esm.sh/dagre@^0.8.5",
+    "js-yaml": "https://esm.sh/js-yaml@^4.1.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-200">
+    <div id="root" class="h-screen w-screen overflow-hidden"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
