@@ -150,12 +150,28 @@ function App() {
     <div className="flex h-screen flex-col bg-background text-foreground overflow-hidden">
       
       {/* Navbar */}
-      <header className="h-16 border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 flex items-center justify-between px-4 z-10 relative shadow-sm">
-        <div className="flex items-center gap-3">
-          <div className="bg-blue-600 p-2 rounded-lg">
-            <LayoutTemplate className="text-white w-5 h-5" />
+      <header className="min-h-16 border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 flex items-center justify-between px-4 z-10 relative shadow-sm py-2">
+        <div className="flex flex-col gap-1">
+          <div className="flex items-center gap-3">
+            <div className="bg-blue-600 p-2 rounded-lg">
+              <LayoutTemplate className="text-white w-5 h-5" />
+            </div>
+            <div className="flex flex-col">
+            <h1 className="font-bold text-lg hidden sm:block">Docker Compose Viz</h1>
+            <p className="text-xs text-slate-500 dark:text-slate-400 hidden sm:block">
+            Made with <span className="text-red-500">❤️</span> by{' '}
+            <a
+              href="https://github.com/varun-raj"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 dark:text-blue-400 hover:underline font-medium"
+            >
+              Varun Raj
+            </a>
+          </p>
+            </div>
           </div>
-          <h1 className="font-bold text-lg hidden sm:block">Docker Compose Viz</h1>
+         
         </div>
 
         <div className="flex items-center gap-2">
@@ -237,7 +253,9 @@ function App() {
           </button>
           
           <a 
-            href="#"
+            href="https://github.com/varun-raj/docker-compose-visualizer"
+            target="_blank"
+            rel="noopener noreferrer"
             className="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors text-slate-600 dark:text-slate-400 hidden sm:block"
             title="View on GitHub"
           >
